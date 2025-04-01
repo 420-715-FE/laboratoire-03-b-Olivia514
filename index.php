@@ -1,3 +1,15 @@
+<?php
+
+$pages = [
+    'Villes et régions' => 'pages/villes_regions.php',
+    'Page secrète' => 'pages/page_secrete.php',
+    'Formulaire de réservation' => 'pages/reservation.php',
+    'Tic Tac Toe' => 'pages/tic_tac_toe.php',
+];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,5 +20,14 @@
 </head>
 <body>
     <h1>Laboratoire 03-B</h1>
+    <nav>
+        <ul>
+            <?php
+            foreach ($pages as $titre => $url) {
+                echo "<li><a href='{$url}'>{$titre}</a></li>";
+            }
+            ?>
+        </ul>
+    </nav>
 </body>
 </html>
